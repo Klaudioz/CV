@@ -20,43 +20,48 @@ import { LinkedInIcon } from "../components/icons/LinkedInIcon";
 import { XIcon } from "../components/icons/XIcon";
 
 export const RESUME_DATA = {
-  name: "Bartosz Jarocki",
-  initials: "BJ",
-  location: "Wrocław, Poland, CET",
-  locationLink: "https://www.google.com/maps/place/Wrocław",
+  name: "Claudio Canales",
+  initials: "CC",
+  location: "Lehi, Utah, United States (MST)",
+  locationLink: "https://www.google.com/maps/place/Lehi",
   about:
-    "Full Stack Engineer focused on building products with extra attention to details",
+    "Technologist, Certified SRE/DevOps/CloudOps, #1 World Bounty Hunter in Profits on Replit 🏆💰 solving Problems with AI 🤖. Always learning",
   summary:
-    "As a Full Stack Engineer, I have successfully taken multiple products from 0 to 1. I lead teams effectively, ensuring an environment where people can do their best work. Currently, I work mostly with TypeScript, React, Node.js, and GraphQL. I have over 8 years of experience in working remotely with companies all around the world.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/1017620?v=4",
-  personalWebsiteUrl: "https://jarocki.me",
+    "First-generation college graduate, I've overcome numerous obstacles to excel in the tech industry. With multiple important certifications in the industry and experience working as a Senior DevOps. I was the top bounty hunter in the world on Replit, working in AI/ML projects. Always seeking new challenges and opportunities to learn more.",
+  avatarUrl: "https://avatars.githubusercontent.com/u/632625?v=4",
+  personalWebsiteUrl: "https://www.claud.me",
   contact: {
-    email: "bartosz.jarocki@hey.com",
-    tel: "+48530213401",
+    email: "klaudioz@gmail.com",
     social: [
       {
         name: "GitHub",
-        url: "https://github.com/BartoszJarocki",
+        url: "https://github.com/klaudioz",
         icon: GitHubIcon,
       },
       {
         name: "LinkedIn",
-        url: "https://www.linkedin.com/in/bjarocki/",
+        url: "https://www.linkedin.com/in/canalesclaudio/",
         icon: LinkedInIcon,
       },
       {
         name: "X",
-        url: "https://x.com/BartoszJarocki",
+        url: "https://www.twitter.com/klaudioz",
         icon: XIcon,
       },
     ],
   },
   education: [
     {
-      school: "Wrocław University of Technology",
-      degree: "Bachelor's Degree in Control systems engineering and Robotics",
-      start: "2007",
-      end: "2010",
+      school: "Maharishi University of Management",
+      degree: "Master's Degree in Computer Science",
+      start: "2016",
+      end: "2018",
+    },
+    {
+      school: "Pontificia Universidad Catolica de Valparaiso",
+      degree: "Bachelor's Degree in Computer Science",
+      start: "2001",
+      end: "2009",
     },
   ],
   work: [
