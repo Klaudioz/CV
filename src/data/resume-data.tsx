@@ -139,6 +139,16 @@ export const RESUME_DATA = {
       end: "12/2013",
       description: "Main developer for the VTR’s phone which increased system efficiency from 30% to 60% through DB tuning. Led development improving payroll extraction processes, reducing the process from 6 hours to 40 minutes.",
     },
+    {
+      company: "Atcom",
+      link: "https://www.atcom.cl",
+      badges: ["Chile"],
+      title: "Software Developer Engineer",
+      logo: NSNLogo,
+      start: "06/2010",
+      end: "03/2011",
+      description: "Contractor at VTR working at the datawarehouse team.",
+    },
   ],
   skills: [
     "AWS",
@@ -152,6 +162,8 @@ export const RESUME_DATA = {
     "GCP",
     "Azure",
     "GitOps",
+    "Next.js",
+    "AI",
 ],
 
   projects: [
