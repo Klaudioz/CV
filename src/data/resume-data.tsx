@@ -25,7 +25,7 @@ export const RESUME_DATA = {
   location: "Lehi, Utah, United States (MST)",
   locationLink: "https://www.google.com/maps/place/Lehi",
   about:
-    "Technologist, Certified SRE/DevOps/CloudOps, #1 World Bounty Hunter in Profits on Replit 🏆💰 solving Problems with AI 🤖. Always learning.",
+    "Technologist, Certified SRE/DevOps/CloudOps, #1 World Bounty Hunter in Profits on Replit (2023) solving Problems with AI 🤖. Always learning.",
   summary:
     "First-generation college graduate, I've overcome numerous obstacles to excel in the tech industry. With multiple important certifications in the industry and experience working as a Senior DevOps. I was the top bounty hunter in the world on Replit, working in AI/ML projects. Always seeking new challenges and opportunities to learn more.",
   avatarUrl: "https://avatars.githubusercontent.com/u/632625?v=4",
@@ -65,6 +65,17 @@ export const RESUME_DATA = {
     },
   ],
   work: [
+    {
+      company: "General Assembly",
+      link: "https://www.generalassemb.ly",
+      badges: ["USA","Remote"],
+      title: "Instructor",
+      logo: ParabolLogo,
+      start: "11/2023",
+      end: "Now",
+      description:
+        "Instructor for Enterprise programs based on Python, Docker, Cloud and Kubernetes",
+    },
     {
       company: "VMWare",
       link: "https://www.vmware.com",
