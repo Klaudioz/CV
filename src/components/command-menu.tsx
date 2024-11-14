@@ -13,11 +13,14 @@ import {
   CommandSeparator,
 } from "@/components/ui/command";
 
-interface Props {
-  links: { url: string; title: string }[];
+interface CommandMenuProps {
+  links?: {
+    url: string;
+    title: string;
+  }[];
 }
 
-export const CommandMenu = ({ links = [] }: { links?: Array<{ url: string; title: string }> }) => {
+export const CommandMenu = ({ links = [] }: CommandMenuProps) => {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {

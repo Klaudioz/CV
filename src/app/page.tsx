@@ -13,6 +13,14 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { ProjectCard } from "@/components/project-card";
 import { Button } from "@/components/ui/button";
 
+// Add this helper function before the Page component
+const formatLinksForCommandMenu = (links: typeof RESUME_DATA.contact.social) => {
+  return links.map(link => ({
+    url: link.url,
+    title: link.name
+  }));
+};
+
 export default function Page() {
   return (
     <>
@@ -169,7 +177,7 @@ export default function Page() {
       </main>
       
       <PrintDrawer />
-      <CommandMenu links={RESUME_DATA.links} />
+      <CommandMenu links={formatLinksForCommandMenu(RESUME_DATA.contact.social)} />
     </>
   );
 }

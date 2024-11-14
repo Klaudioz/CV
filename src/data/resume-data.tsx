@@ -217,4 +217,11 @@ export const RESUME_DATA = {
       description: "AI chatbot tailors responses using Notion databases for informed action",
     },
   ],
+
+  links: [
+    { name: "GitHub", url: "https://github.com/klaudioz" },
+    { name: "LinkedIn", url: "https://linkedin.com/in/canalesclaudio" },
+    { name: "X", url: "https://x.com/klaudioz" },
+    { name: "Email", url: "mailto:claudio@kytzo.com" },
+  ],
 } as const;
