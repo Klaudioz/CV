@@ -12,20 +12,28 @@ import {
 
 export function ThemeToggle() {
   const [isDark, setIsDark] = useState(false);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
 
   useEffect(() => {
+    // Detect touch device
+    setIsTouchDevice('ontouchstart' in window);
+    
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.code === "Space") {
         event.preventDefault();
-        setIsDark(prev => !prev);
-        document.body.classList.add('animation-ready');
-        document.body.classList.toggle('dark');
+        toggleTheme();
       }
     };
 
     document.addEventListener('keydown', handleKeyDown);
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, []);
+
+  const toggleTheme = () => {
+    setIsDark(prev => !prev);
+    document.body.classList.add('animation-ready');
+    document.body.classList.toggle('dark');
+  };
 
   return (
     <TooltipProvider>
@@ -34,11 +42,13 @@ export function ThemeToggle() {
           <Button
             variant="ghost"
             size="icon"
-            className="fixed top-4 right-4 h-10 w-10 rounded-full bg-transparent hover:bg-transparent"
-            onClick={() => {
-              setIsDark(prev => !prev);
-              document.body.classList.add('animation-ready');
-              document.body.classList.toggle('dark');
+            className="fixed top-4 right-4 h-10 w-10 rounded-full bg-transparent hover:bg-transparent touch-manipulation"
+            onClick={toggleTheme}
+            onTouchEnd={(e) => {
+              e.preventDefault();
+              if (isTouchDevice) {
+                toggleTheme();
+              }
             }}
           >
             <SunIcon
@@ -50,9 +60,11 @@ export function ThemeToggle() {
             <span className="sr-only">Toggle theme</span>
           </Button>
         </TooltipTrigger>
-        <TooltipContent>
-          press <kbd className="px-1 rounded bg-muted">space</kbd> to toggle the sun
-        </TooltipContent>
+        {!isTouchDevice && (
+          <TooltipContent>
+            press <kbd className="px-1 rounded bg-muted">space</kbd> to toggle the sun
+          </TooltipContent>
+        )}
       </Tooltip>
     </TooltipProvider>
   );

@@ -30,23 +30,29 @@
 
 @layer base {
   * {
-    @apply border-border;
+    border-color: var(--border);
+  }
+  
+  html {
+    -webkit-tap-highlight-color: transparent;
   }
   
   body {
-    @apply bg-background text-foreground;
+    background-color: var(--background);
+    color: var(--foreground);
+    touch-action: manipulation;
     margin: 0;
     padding: 0;
     min-height: 100vh;
-    background-color: var(--background);
-    color: var(--foreground);
     animation-duration: 0s;
     animation-fill-mode: forwards;
     animation-timing-function: linear;
+    overscroll-behavior: none;
   }
 
   a {
-    @apply transition-colors duration-200;
+    transition-property: color;
+    transition-duration: 200ms;
   }
 }
 
@@ -97,10 +103,22 @@ body.animation-ready.dark {
 /* Update the perspective opacity to match original */
 .perspective {
   opacity: 0.07;
+  transform-origin: top right;
+  
+  @media (max-width: 768px) {
+    opacity: 0.04;
+    width: 100vw;
+    height: 100vh;
+    transform: none;
+  }
 }
 
 .dark .perspective {
   opacity: 0.3;
+  
+  @media (max-width: 768px) {
+    opacity: 0.15;
+  }
 }
 
 /* Update the glow effects */
@@ -148,14 +166,40 @@ body.animation-ready.dark {
 
 /* Update component styles */
 .command-hint {
-  @apply fixed bottom-0 left-0 right-0 border-t border-muted-foreground/20 p-1 text-center text-sm text-muted-foreground print:hidden;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-top-width: 1px;
+  border-color: rgb(var(--muted-foreground) / 0.2);
+  padding: 0.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.print\:hidden {
+  @media print {
+    display: none;
+  }
 }
 
 .command-hint kbd {
-  @apply pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-muted-foreground/40 px-1.5 font-mono text-[10px] font-medium;
+  pointer-events: none;
+  display: inline-flex;
+  height: 1.25rem;
+  user-select: none;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgb(var(--muted-foreground) / 0.4);
+  padding-left: 0.375rem;
+  padding-right: 0.375rem;
+  font-family: ui-monospace, monospace;
+  font-size: 0.625rem;
+  font-weight: 500;
 }
 
-/* Add these styles */
 .theme-toggle {
   transition: opacity 0.3s ease;
 }

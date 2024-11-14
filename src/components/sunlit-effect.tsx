@@ -2,11 +2,11 @@
 
 export function SunlitEffect() {
   return (
-    <div id="dappled-light">
+    <div id="dappled-light" className="touch-none">
       <div id="glow"></div>
       <div id="glow-bounce"></div>
       <div className="perspective">
-        <div id="leaves">
+        <div id="leaves" className="pointer-events-none">
           <svg style={{ width: 0, height: 0, position: 'absolute' }}>
             <defs>
               <filter id="wind" x="-20%" y="-20%" width="140%" height="140%">
@@ -32,7 +32,7 @@ export function SunlitEffect() {
             </defs>
           </svg>
         </div>
-        <div id="blinds">
+        <div id="blinds" className="pointer-events-none">
           <div className="shutters">
             {Array.from({ length: 23 }).map((_, i) => (
               <div key={i} className="shutter"></div>
@@ -44,7 +44,7 @@ export function SunlitEffect() {
           </div>
         </div>
       </div>
-      <div id="progressive-blur">
+      <div id="progressive-blur" className="pointer-events-none">
         <div></div>
         <div></div>
         <div></div>
