@@ -17,7 +17,7 @@ interface Props {
   links: { url: string; title: string }[];
 }
 
-export const CommandMenu = ({ links }: Props) => {
+export const CommandMenu = ({ links = [] }: { links?: Array<{ url: string; title: string }> }) => {
   const [open, setOpen] = React.useState(false);
 
   React.useEffect(() => {
@@ -34,9 +34,9 @@ export const CommandMenu = ({ links }: Props) => {
 
   return (
     <>
-      <p className="fixed bottom-0 left-0 right-0 border-t border-t-muted bg-white p-1 text-center text-sm text-muted-foreground print:hidden">
+      <p className="command-hint">
         Press{" "}
-        <kbd className="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground opacity-100">
+        <kbd>
           <span className="text-xs">⌘</span>J
         </kbd>{" "}
         to open the command menu
@@ -55,19 +55,21 @@ export const CommandMenu = ({ links }: Props) => {
               <span>Print</span>
             </CommandItem>
           </CommandGroup>
-          <CommandGroup heading="Links">
-            {links.map(({ url, title }) => (
-              <CommandItem
-                key={url}
-                onSelect={() => {
-                  setOpen(false);
-                  window.open(url, "_blank");
-                }}
-              >
-                <span>{title}</span>
-              </CommandItem>
-            ))}
-          </CommandGroup>
+          {links.length > 0 && (
+            <CommandGroup heading="Links">
+              {links.map(({ url, title }) => (
+                <CommandItem
+                  key={url}
+                  onSelect={() => {
+                    setOpen(false);
+                    window.open(url, "_blank");
+                  }}
+                >
+                  <span>{title}</span>
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          )}
           <CommandSeparator />
         </CommandList>
       </CommandDialog>

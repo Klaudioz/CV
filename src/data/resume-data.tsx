@@ -25,13 +25,13 @@ export const RESUME_DATA = {
   location: "Lehi, Utah, United States (MST)",
   locationLink: "https://www.google.com/maps/place/Lehi",
   about:
-    "Technologist, Certified SRE/DevOps/CloudOps, #1 World Bounty Hunter in Profits on Replit 🏆💰 solving Problems with AI 🤖. Always learning.",
+    "Technologist, Certified SRE/DevOps/CloudOps, #1 World Bounty Hunter in Profits on Replit (2023) solving Problems with AI 🤖. Always learning.",
   summary:
     "First-generation college graduate, I've overcome numerous obstacles to excel in the tech industry. With multiple important certifications in the industry and experience working as a Senior DevOps. I was the top bounty hunter in the world on Replit, working in AI/ML projects. Always seeking new challenges and opportunities to learn more.",
   avatarUrl: "https://avatars.githubusercontent.com/u/632625?v=4",
   personalWebsiteUrl: "https://www.claud.me",
   contact: {
-    email: "klaudioz@gmail.com",
+    email: "claudio@kytzo.com",
     social: [
       {
         name: "GitHub",
@@ -53,18 +53,31 @@ export const RESUME_DATA = {
   education: [
     {
       school: "Maharishi University of Management",
-      degree: "Master's Degree in Computer Science",
+      degree: "Master of Science in Computer Science",
       start: "2016",
       end: "2018",
+      url: "https://www.miu.edu"
     },
     {
       school: "Pontificia Universidad Catolica de Valparaiso",
-      degree: "Bachelor's Degree in Computer Science",
+      degree: "Bachelor of Science in Computer Engineering",
       start: "2001",
       end: "2009",
+      url: "https://www.pucv.cl"
     },
   ],
   work: [
+    {
+      company: "General Assembly",
+      link: "https://www.generalassemb.ly",
+      badges: ["USA","Remote"],
+      title: "Instructor",
+      logo: ParabolLogo,
+      start: "11/2023",
+      end: "Now",
+      description:
+        "Instructor for Enterprise programs based on Python, Docker, Cloud and Kubernetes",
+    },
     {
       company: "VMWare",
       link: "https://www.vmware.com",
@@ -128,20 +141,38 @@ export const RESUME_DATA = {
       end: "12/2013",
       description: "Main developer for the VTR’s phone which increased system efficiency from 30% to 60% through DB tuning. Led development improving payroll extraction processes, reducing the process from 6 hours to 40 minutes.",
     },
+    {
+      company: "Atcom",
+      link: "https://www.atcom.cl",
+      badges: ["Chile"],
+      title: "Software Developer Engineer",
+      logo: NSNLogo,
+      start: "06/2010",
+      end: "03/2011",
+      description: "Contractor at VTR working at the datawarehouse team.",
+    },
   ],
   skills: [
     "AWS",
     "Kubernetes",
     "Docker",
-    "CI/CD",
+    "GitHub Actions",
+    "GitLab CI/CD",
     "Terraform",
     "Python",
     "Linux",
     "Automation",
+    "Troubleshooting",
     "GCP",
     "Azure",
     "GitOps",
-],
+    "Next.js",
+    "AI",
+    "Shadcn",
+    "Tailwind",
+    "Solana",
+    "Web3",
+  ],
 
   projects: [
     {

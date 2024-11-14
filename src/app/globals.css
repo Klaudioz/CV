@@ -2,79 +2,172 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    --background: 0 0% 100%;
-    --foreground: 224 71.4% 4.1%;
+:root {
+  --day: #fffdfa;
+  --evening: #fccc83;
+  --dusk: #db7a2a;
+  --night: #0f131c;
+  --dawn: #16132b;
+  --morning: #9fb3bf;
+  --light: var(--day);
+  --dark: var(--night);
+  --shadow: #1a1917;
+  --bounce-light: #f5d7a6;
+  --timing-fn: cubic-bezier(0.455, 0.190, 0.000, 0.985);
 
-    --card: 0 0% 100%;
-    --card-foreground: 224 71.4% 4.1%;
+  --background: var(--light);
+  --foreground: var(--dark);
+  --muted: transparent;
+  --muted-foreground: color-mix(in srgb, var(--foreground) 70%, transparent);
+}
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 224 71.4% 4.1%;
-
-    --primary: 220.9 39.3% 11%;
-    --primary-foreground: 210 20% 98%;
-
-    --secondary: 220 14.3% 95.9%;
-    --secondary-foreground: 220.9 39.3% 11%;
-
-    --muted: 220 14.3% 95.9%;
-    --muted-foreground: 220 8.9% 46.1%;
-
-    --accent: 220 14.3% 95.9%;
-    --accent-foreground: 220.9 39.3% 11%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 224 71.4% 4.1%;
-
-    --radius: 0.5rem;
-  }
-
-  .dark {
-    --background: 224 71.4% 4.1%;
-    --foreground: 210 20% 98%;
-
-    --card: 224 71.4% 4.1%;
-    --card-foreground: 210 20% 98%;
-
-    --popover: 224 71.4% 4.1%;
-    --popover-foreground: 210 20% 98%;
-
-    --primary: 210 20% 98%;
-    --primary-foreground: 220.9 39.3% 11%;
-
-    --secondary: 215 27.9% 16.9%;
-    --secondary-foreground: 210 20% 98%;
-
-    --muted: 215 27.9% 16.9%;
-    --muted-foreground: 217.9 10.6% 64.9%;
-
-    --accent: 215 27.9% 16.9%;
-    --accent-foreground: 210 20% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 20% 98%;
-
-    --border: 215 27.9% 16.9%;
-    --input: 215 27.9% 16.9%;
-    --ring: 216 12.2% 83.9%;
-  }
+.dark {
+  --background: var(--night);
+  --foreground: var(--day);
+  --shadow: #030307;
+  --bounce-light: #1b293f;
 }
 
 @layer base {
   * {
     @apply border-border;
   }
+  
   body {
     @apply bg-background text-foreground;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: var(--background);
+    color: var(--foreground);
+    animation-duration: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+  }
+
+  a {
+    @apply transition-colors duration-200;
   }
 }
 
-.print-force-new-page {
-  page-break-before: always;
+body.animation-ready {
+  animation-play-state: running;
+  animation-duration: 1s;
+  animation-name: sunrise;
+}
+
+body.animation-ready.dark {
+  animation-duration: 1.7s;
+  animation-name: sunset;
+}
+
+@keyframes sunrise {
+  0% {
+    background-color: var(--night);
+  }
+  10% {
+    background-color: var(--dawn);
+  }
+  35% {
+    background-color: var(--morning);
+  }
+  100% {
+    background-color: var(--day);
+  }
+}
+
+@keyframes sunset {
+  0% {
+    background-color: var(--day);
+  }
+  30% {
+    background-color: var(--evening);
+  }
+  60% {
+    background-color: var(--dusk);
+  }
+  90% {
+    background-color: var(--dawn);
+  }
+  100% {
+    background-color: var(--night);
+  }
+}
+
+/* Update the perspective opacity to match original */
+.perspective {
+  opacity: 0.07;
+}
+
+.dark .perspective {
+  opacity: 0.3;
+}
+
+/* Update the glow effects */
+#glow {
+  position: absolute;
+  background: linear-gradient(309deg, var(--bounce-light), var(--bounce-light) 20%, transparent);
+  transition: background 1.0s var(--timing-fn);
+  height: 100%;
+  width: 100%;
+  opacity: 0.5;
+}
+
+#glow-bounce {
+  content: "";
+  position: absolute;
+  background: linear-gradient(355deg, var(--bounce-light) 0%, transparent 30%, transparent 100%);
+  transition: background 1.0s var(--timing-fn);
+  opacity: 0.5;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+
+/* Update the blinds effect */
+#blinds .shutter,
+#blinds .bar {
+  background-color: var(--shadow);
+}
+
+#blinds > .shutters {
+  gap: 60px;
+}
+
+.dark #blinds > .shutters {
+  gap: 20px;
+}
+
+.shutter {
+  height: 40px;
+}
+
+.dark .shutter {
+  height: 80px;
+}
+
+/* Update component styles */
+.command-hint {
+  @apply fixed bottom-0 left-0 right-0 border-t border-muted-foreground/20 p-1 text-center text-sm text-muted-foreground print:hidden;
+}
+
+.command-hint kbd {
+  @apply pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border border-muted-foreground/40 px-1.5 font-mono text-[10px] font-medium;
+}
+
+/* Add these styles */
+.theme-toggle {
+  transition: opacity 0.3s ease;
+}
+
+.theme-toggle:hover::after {
+  content: '[Space]';
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 0.5rem;
+  font-size: 0.75rem;
+  opacity: 0.7;
+  pointer-events: none;
 }
