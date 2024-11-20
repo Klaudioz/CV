@@ -6,8 +6,8 @@ import "./globals.css";
 import "./sunlit.css";
 
 export const metadata: Metadata = {
-  title: "Sunlit Effect",
-  description: "A recreation of the sunlit effect",
+  title: "Claudio Canales Resume",
+  description: "Claudio Canales Resume",
 };
 
 const inter = Inter({
