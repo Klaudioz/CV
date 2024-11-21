@@ -76,7 +76,7 @@ export const RESUME_DATA = {
       start: "11/2023",
       end: "Now",
       description:
-        "Instructor for Enterprise programs based on Python, Docker, Cloud and Kubernetes",
+        "IA Subject Matter Expert & Instructor for Enterprise programs based on Python, Docker, Cloud and Kubernetes",
     },
     {
       company: "VMWare",
