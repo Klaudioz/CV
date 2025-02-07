@@ -70,13 +70,13 @@ export const RESUME_DATA = {
     {
       company: "General Assembly",
       link: "https://www.generalassemb.ly",
-      badges: ["USA","Remote"],
+      badges: ["Chile","Remote USA"],
       title: "Instructor",
       logo: ParabolLogo,
       start: "11/2023",
       end: "Now",
       description:
-        "IA Subject Matter Expert & Instructor for Enterprise programs based on Python, Docker, Cloud and Kubernetes",
+        "Enterprise lead instructor and subject matter expert in Generative AI, Solutions Architecture AI, and Software Development with Python, Docker, AWS, and Kubernetes, offering technical expertise and guidance in AI and industry best practices."
     },
     {
       company: "VMWare",
