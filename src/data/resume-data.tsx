@@ -178,7 +178,6 @@ export const RESUME_DATA = {
     {
       title: "Vision Canvas",
       techStack: [
-      "Side Project",
       "TypeScript",
       "Next.js",
       "OpenAI",
@@ -194,7 +193,6 @@ export const RESUME_DATA = {
     {
       title: "Christian Doctrine",
       techStack: [
-        "Side Project",
         "TypeScript",
         "Next.js",
         "OpenAI",
@@ -210,7 +208,6 @@ export const RESUME_DATA = {
     {
       title: "NBA ML Sports predictor",
       techStack: [
-        "Side Project",
         "Python",
         "Machine Learning",
         "Deep Learning",
@@ -224,7 +221,6 @@ export const RESUME_DATA = {
     {
       title: "Dynamic Chatbot Assistant",
       techStack: [
-        "Side Project",
         "Python",
         "Notion",
         "OpenAI",
