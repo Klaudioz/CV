@@ -176,6 +176,22 @@ export const RESUME_DATA = {
 
   projects: [
     {
+      title: "Vision Canvas",
+      techStack: [
+      "Side Project",
+      "TypeScript",
+      "Next.js",
+      "OpenAI",
+      "Replicate",
+      "GitHub/Vercel",
+      ],
+      description: "AI-powered image generation platform focused on creative exploration and visual storytelling through text-to-image models.",
+      link: {
+        label: "visioncanvas.ai",
+        href: "https://www.visioncanvas.ai",
+      },
+    },
+    {
       title: "Christian Doctrine",
       techStack: [
         "Side Project",
