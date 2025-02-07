@@ -4,6 +4,7 @@ import {
   CardContent,
 } from "./ui/card";
 import { Badge } from "./ui/badge";
+import { ExternalLink } from "lucide-react";
 
 interface ProjectCardProps {
   title: string;
@@ -27,9 +28,10 @@ export function ProjectCard({
               <a
                 href={link}
                 target="_blank"
-                className="inline-flex items-center gap-1 hover:underline"
+                className="inline-flex items-center gap-1.5 text-primary hover:underline"
               >
                 {title}
+                <ExternalLink className="h-3.5 w-3.5" />
               </a>
             ) : (
               title
