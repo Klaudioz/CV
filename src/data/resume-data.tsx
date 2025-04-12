@@ -54,15 +54,15 @@ export const RESUME_DATA = {
     {
       school: "Maharishi University of Management",
       degree: "Master of Science in Computer Science",
-      start: "2016",
-      end: "2018",
+      start: <strong>2016</strong>,
+      end: <strong>2018</strong>,
       url: "https://www.miu.edu"
     },
     {
       school: "Pontificia Universidad Catolica de Valparaiso",
       degree: "Bachelor of Science in Computer Engineering",
-      start: "2001",
-      end: "2009",
+      start: <strong>2001</strong>,
+      end: <strong>2009</strong>,
       url: "https://www.pucv.cl"
     },
   ],
@@ -73,8 +73,8 @@ export const RESUME_DATA = {
       badges: ["Chile","Remote USA"],
       title: "Enterprise lead instructor & SME",
       logo: ParabolLogo,
-      start: "11/2023",
-      end: "Now",
+      start: <strong>11/2023</strong>,
+      end: <strong>Now</strong>,
       description:
         "Enterprise lead instructor and subject matter expert in Generative AI, Solutions Architecture AI, and Software Development with Python, Docker, AWS, and Kubernetes, offering technical expertise and guidance in AI and industry best practices."
     },
@@ -84,8 +84,8 @@ export const RESUME_DATA = {
       badges: ["USA","Remote"],
       title: "Site Reliability Engineer",
       logo: ParabolLogo,
-      start: "12/2021",
-      end: "06/2023",
+      start: <strong>12/2021</strong>,
+      end: <strong>06/2023</strong>,
       description:
         "Led migration of thousands of resources in multiple zones to AWS Transit Gateway using Terraform. Managed 20 Kubernetes clusters with about 1000 nodes, performing upgrades and troubleshooting issues.",
     },
@@ -95,8 +95,8 @@ export const RESUME_DATA = {
       badges: ["USA","Remote"],
       title: "Cloud Engineer",
       logo: ClevertechLogo,
-      start: "09/2020",
-      end: "12/2021",
+      start: <strong>09/2020</strong>,
+      end: <strong>12/2021</strong>,
       description:
         "Performed multiple tooling and Kubernetes cluster upgrades in GKE and Azure. Implemented cloud infrastructure management using Terraform and ArgoCD.",
     },
@@ -106,8 +106,8 @@ export const RESUME_DATA = {
       badges: ["USA","Remote"],
       title: "DevOps Engineer",
       logo: JojoMobileLogo,
-      start: "02/2020",
-      end: "07/2020",
+      start: <strong>02/2020</strong>,
+      end: <strong>07/2020</strong>,
       description:
         "Implemented Openshift v4 automation across multiple clouds, enhancing system scalability. Achieved a 50% reduction in cloud costs through effective monitoring and optimization.",
     },
@@ -117,8 +117,8 @@ export const RESUME_DATA = {
       badges: ["USA"],
       title: "DevOps Engineer",
       logo: NSNLogo,
-      start: "04/2017",
-      end: "02/2020",
+      start: <strong>04/2017</strong>,
+      end: <strong>02/2020</strong>,
       description: "Linux admin with experience in configuring, monitoring, upgrading, and maintaining system infrastructure. Improved time to implement any project with Control-M by 80% by building new processes and standards. Implemented CI/CD workflows and automation, enhancing deployment processes and operational efficiency.",
     },
     {
@@ -127,8 +127,8 @@ export const RESUME_DATA = {
       badges: ["Chile"],
       title: "Software Developer Engineer",
       logo: NSNLogo,
-      start: "01/2014",
-      end: "04/2016",
+      start: <strong>01/2014</strong>,
+      end: <strong>04/2016</strong>,
       description: "Ensured successful and accurate processing of transactions over $8,000 by designing back-end functionalities. Evolved the Itaú Bank High Amounts System by converting it into an RPM-packed product. Implemented and optimized multiple automation processes with high efficiency and performance.",
     },
     {
@@ -137,8 +137,8 @@ export const RESUME_DATA = {
       badges: ["Chile"],
       title: "Software Developer Engineer",
       logo: NSNLogo,
-      start: "04/2011",
-      end: "12/2013",
+      start: <strong>04/2011</strong>,
+      end: <strong>12/2013</strong>,
       description: "Main developer for the VTR's phone which increased system efficiency from 30% to 60% through DB tuning. Led development improving payroll extraction processes, reducing the process from 6 hours to 40 minutes.",
     },
     {
@@ -147,8 +147,8 @@ export const RESUME_DATA = {
       badges: ["Chile"],
       title: "Software Developer Engineer",
       logo: NSNLogo,
-      start: "06/2010",
-      end: "03/2011",
+      start: <strong>06/2010</strong>,
+      end: <strong>03/2011</strong>,
       description: "Contractor at VTR working at the datawarehouse team.",
     },
   ],
