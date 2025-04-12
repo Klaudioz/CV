@@ -70,13 +70,13 @@ export const RESUME_DATA = {
     {
       company: "General Assembly",
       link: "https://www.generalassemb.ly",
-      badges: ["USA","Remote"],
-      title: "Instructor",
+      badges: ["Chile","Remote USA"],
+      title: "Enterprise lead instructor & SME",
       logo: ParabolLogo,
       start: "11/2023",
       end: "Now",
       description:
-        "IA Subject Matter Expert & Instructor for Enterprise programs based on AI, Python, Docker, Cloud and Kubernetes",
+        "Enterprise lead instructor and subject matter expert in Generative AI, Solutions Architecture AI, and Software Development with Python, Docker, AWS, and Kubernetes, offering technical expertise and guidance in AI and industry best practices."
     },
     {
       company: "VMWare",
@@ -162,23 +162,41 @@ export const RESUME_DATA = {
     "Python",
     "Linux",
     "Automation",
-    "Troubleshooting",
     "GCP",
     "Azure",
     "GitOps",
     "Next.js",
+    "React",
     "AI",
-    "Shadcn",
-    "Tailwind",
+    "MLOps",
+    "LLMs",
+    "RAG",
+    "Prompt Engineering",
+    "Generative AI",
     "Solana",
     "Web3",
+    "Learning Design",
   ],
 
   projects: [
     {
+      title: "Vision Canvas",
+      techStack: [
+      "TypeScript",
+      "Next.js",
+      "OpenAI",
+      "Replicate",
+      "GitHub/Vercel",
+      ],
+      description: "AI-powered image generation platform focused on creative exploration and visual storytelling through text-to-image models.",
+      link: {
+        label: "visioncanvas.ai",
+        href: "https://www.visioncanvas.ai",
+      },
+    },
+    {
       title: "Christian Doctrine",
       techStack: [
-        "Side Project",
         "TypeScript",
         "Next.js",
         "OpenAI",
@@ -194,21 +212,18 @@ export const RESUME_DATA = {
     {
       title: "NBA ML Sports predictor",
       techStack: [
-        "Side Project",
         "Python",
-        "Machine Learning",
-        "Deep Learning",
+        "ML",
+        "DL",
         "Tensorflow",
         "Keras",
         "GCP",
-        "Telegram",
       ],
       description: "AI predicts NBA game outcomes using neural networks, enhancing betting insights",
     },
     {
       title: "Dynamic Chatbot Assistant",
       techStack: [
-        "Side Project",
         "Python",
         "Notion",
         "OpenAI",
