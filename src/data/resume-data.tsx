@@ -28,7 +28,7 @@ export const RESUME_DATA = {
     "Technologist, Certified SRE/DevOps/CloudOps, #1 World Bounty Hunter in Profits on Replit (2023) solving Problems with AI 🤖. Always learning.",
   summary:
     "First-generation college graduate, I've overcome numerous obstacles to excel in the tech industry. With multiple important certifications in the industry and experience working as a Senior DevOps. I was the top bounty hunter in the world on Replit, working in AI/ML projects. Always seeking new challenges and opportunities to learn more.",
-  avatarUrl: "https://avatars.githubusercontent.com/u/632625?v=4",
+  avatarUrl: "/images/k_gg.jpg",
   personalWebsiteUrl: "https://www.claud.me",
   contact: {
     email: "claudio@kytzo.com",
@@ -139,7 +139,7 @@ export const RESUME_DATA = {
       logo: NSNLogo,
       start: "04/2011",
       end: "12/2013",
-      description: "Main developer for the VTR’s phone which increased system efficiency from 30% to 60% through DB tuning. Led development improving payroll extraction processes, reducing the process from 6 hours to 40 minutes.",
+      description: "Main developer for the VTR's phone which increased system efficiency from 30% to 60% through DB tuning. Led development improving payroll extraction processes, reducing the process from 6 hours to 40 minutes.",
     },
     {
       company: "Atcom",
