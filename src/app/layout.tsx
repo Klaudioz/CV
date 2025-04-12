@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { SunlitEffect } from "@/components/sunlit-effect";
+import { Analytics } from "@vercel/analytics/react"
 
 import "./globals.css";
 import "./sunlit.css";
@@ -25,6 +26,7 @@ export default function RootLayout({
       <body>
         <SunlitEffect />
         {children}
+        <Analytics />
       </body>
     </html>
   );
