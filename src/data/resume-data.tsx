@@ -76,7 +76,7 @@ export const RESUME_DATA = {
       start: <strong>11/2023</strong>,
       end: <strong>Now</strong>,
       description:
-        "Enterprise lead instructor and subject matter expert in Generative AI, Solutions Architecture AI, and Software Development with Python, Docker, AWS, and Kubernetes, offering technical expertise and guidance in AI and industry best practices."
+        "Enterprise lead instructor and subject matter expert in Generative AI, Solutions Architecture AI, and Software Development with Python, Docker, AWS, & Kubernetes, offering technical expertise and guidance in AI and industry best practices."
     },
     {
       company: "VMWare",
