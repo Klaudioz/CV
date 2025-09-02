@@ -70,7 +70,7 @@ export const RESUME_DATA = {
     {
       company: "General Assembly",
       link: "https://www.generalassemb.ly",
-      badges: ["Chile","Remote USA"],
+      badges: ["Chile","Remote USA", "Contractor"],
       title: "Enterprise lead instructor & SME",
       logo: ParabolLogo,
       start: <strong>11/2023</strong>,
