@@ -37,7 +37,7 @@ export const CommandMenu = ({ links = [] }: CommandMenuProps) => {
 
   return (
     <>
-      <p className="command-hint">
+      <p className="command-hint print:hidden">
         Press{" "}
         <kbd>
           <span className="text-xs">⌘</span>J

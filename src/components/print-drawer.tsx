@@ -2,40 +2,35 @@
 
 import { Button } from "./ui/button";
 import { PrinterIcon } from "lucide-react";
-import {
-  Drawer,
-  DrawerTrigger,
-  DrawerContent,
-  DrawerHeader,
-  DrawerTitle,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerClose,
-} from "./ui/drawer";
 
 export const PrintDrawer = () => {
+  const handlePrint = () => {
+    // Force print dialog and optimize for direct printing
+    const printOptions = {
+      destination: 'printer',
+      suppressDefaultTitle: true,
+      margins: 'default'
+    };
+
+    // Use a more direct approach
+    if (window.matchMedia && window.matchMedia('print').matches) {
+      // Already in print mode
+      return;
+    }
+
+    // Trigger print with a small delay to ensure styles are applied
+    setTimeout(() => {
+      window.print();
+    }, 100);
+  };
+
   return (
-    <Drawer>
-      <DrawerTrigger asChild>
-        <Button className="fixed bottom-4 right-4 h-16 w-16 rounded-full shadow-2xl print:hidden backdrop-blur-sm">
-          <PrinterIcon />
-        </Button>
-      </DrawerTrigger>
-      <DrawerContent className="bg-background/80 backdrop-blur-md">
-        <div className="mx-auto w-full max-w-sm">
-          <DrawerHeader>
-            <DrawerTitle>Move Goal</DrawerTitle>
-            <DrawerDescription>Set your daily activity goal.</DrawerDescription>
-          </DrawerHeader>
-          <div className="p-4 pb-0"></div>
-          <DrawerFooter>
-            <Button onClick={() => window.print()}>Print</Button>
-            <DrawerClose asChild>
-              <Button variant="outline">Cancel</Button>
-            </DrawerClose>
-          </DrawerFooter>
-        </div>
-      </DrawerContent>
-    </Drawer>
+    <Button
+      onClick={handlePrint}
+      className="fixed bottom-4 right-4 h-16 w-16 rounded-full shadow-2xl print:hidden backdrop-blur-sm hover:scale-105 transition-transform"
+      title="Print CV"
+    >
+      <PrinterIcon />
+    </Button>
   );
 };

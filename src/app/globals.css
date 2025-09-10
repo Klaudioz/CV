@@ -184,6 +184,104 @@ body.animation-ready.dark {
   }
 }
 
+/* Print-specific styles */
+@media print {
+  /* Hide interactive elements */
+  .print\:hidden,
+  button,
+  [role="button"],
+  nav,
+  .fixed,
+  .sticky {
+    display: none !important;
+  }
+
+  /* Optimize layout for print */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+
+  /* Remove margins and optimize spacing */
+  .container {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Optimize cards and sections */
+  .mt-8,
+  .mt-12 {
+    margin-top: 1rem !important;
+  }
+
+  /* Ensure text is readable */
+  h1, h2, h3, h4 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+
+  /* Optimize badges and small text */
+  .text-xs,
+  .text-sm {
+    font-size: 10pt !important;
+  }
+
+  /* Ensure links are visible but not clickable */
+  a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")" !important;
+    font-size: 9pt !important;
+    color: #666 !important;
+  }
+
+  /* Force new page for projects section */
+  .print-force-new-page {
+    page-break-before: always;
+  }
+
+  /* Optimize grid layout for print */
+  .grid {
+    display: block !important;
+  }
+
+  .grid > * {
+    display: block !important;
+    margin-bottom: 1rem !important;
+  }
+
+  /* Hide background effects and animations */
+  #glow,
+  #glow-bounce,
+  #leaves,
+  #progressive-blur,
+  .perspective,
+  #blinds {
+    display: none !important;
+  }
+
+  /* Optimize avatar size */
+  .h-28 {
+    height: 80pt !important;
+  }
+
+  /* Ensure proper spacing */
+  .space-y-1\.5 > * + * {
+    margin-top: 0.5rem !important;
+  }
+
+  .gap-x-1,
+  .gap-x-2 {
+    gap: 0.5rem !important;
+  }
+}
+
 .command-hint kbd {
   pointer-events: none;
   display: inline-flex;
