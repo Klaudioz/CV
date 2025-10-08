@@ -70,13 +70,24 @@ export const RESUME_DATA = {
     {
       company: "General Assembly",
       link: "https://www.generalassemb.ly",
-      badges: ["Chile","Remote USA", "Contractor"],
-      title: "Enterprise lead instructor & SME",
+      badges: ["Remote", "Contractor"],
+      title: "Subject Matter Expert / Senior Instructor",
       logo: ParabolLogo,
-      start: <strong>11/2023</strong>,
+      start: <strong>01/2024</strong>,
       end: <strong>Now</strong>,
       description:
-        "Enterprise lead instructor and subject matter expert in Generative AI, Solutions Architecture AI, and Software Development with Python, Docker, AWS, & Kubernetes, offering technical expertise and guidance in AI and industry best practices."
+        "Lead enterprise instructor for Deloitte, training hundreds of engineers in Generative AI, solutions architecture, LLM fine-tuning and model evaluation, containers, Cloud, Kubernetes and DevOps best practices."
+    },
+    {
+      company: "Freelance",
+      link: "https://contra.com/klaudioz?r=klaudioz",
+      badges: ["Remote", "Bounty Hunter"],
+      title: "DevOps Engineer / AI Developer",
+      logo: ConsultlyLogo,
+      start: <strong>01/2024</strong>,
+      end: <strong>Now</strong>,
+      description:
+        "Built production scraper for Ellis using Playwright+stealth, reCAPTCHA v3 Enterprise, Terraform, systemd, GitHub Actions, and Supabase. Developed tooling & AI workflows for dataset creation, annotation, and model evaluation on contract."
     },
     {
       company: "VMWare",
